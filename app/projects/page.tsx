@@ -1,10 +1,10 @@
 "use client"
 import gsap from "gsap";
-import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
+import { AnimatedTestimonials } from "components/ui/animated-testimonials";
 import { useGSAP } from "@gsap/react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import InternalNav from "@/components/InternalNav";
+import InternalNav from "components/InternalNav";
 
 export default function Projects() {
   useGSAP(() => {

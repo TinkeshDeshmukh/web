@@ -1,5 +1,5 @@
 "use client";
-import Hero from "@/app/Hero/page";
+import Hero from "app/Hero/page";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import gsap from "gsap";
 import { AnimatedTestimonials } from "components/ui/animated-testimonials";
 import { useGSAP } from "@gsap/react";
@@ -20,36 +20,37 @@ export default function Projects() {
       opacity: 0,
       duration: 1.5,
     });
-    tl.from(".internalNav",{
-      opacity:0,
-      y:-50
-      // scale:1.2
-      
-    })
+    tl.from(".internalNav", {
+      opacity: 0,
+      y: -50,
+    });
+
     // Cards fade in
     tl.from(".right_compo", {
       opacity: 0,
-      x:200,
+      x: 200,
       duration: 1,
     });
 
     // Popcorn animation for letters
-    tl.from(".letter", {
-      y: 300,
+    tl.from(
+      ".letter",
+      {
+        y: 300,
+        opacity: 0,
+        scale: 0.3,
+        rotation: () => gsap.utils.random(-720, 720, 90),
+        ease: "elastic.out(1, 0.6)",
+        stagger: 0.15,
+        duration: 1,
+      },
+      "<"
+    );
+
+    tl.from(".link_btn", {
+      y: 20,
       opacity: 0,
-      scale: 0.3,
-      rotation: () => gsap.utils.random(-720,720,90), // random rotation per letter
-      ease: "elastic.out(1, 0.6)",
-      stagger: 0.15,
-      duration: 1,
-    },"<");
-    tl.from(".link_btn",{
-      y:20,
-      opacity:0,
-    })
-
-
-    
+    });
   });
 
   const testimonials = [
@@ -77,24 +78,28 @@ export default function Projects() {
   ];
 
   return (
-    <div className="w-screen h-screen relative bg-gray-900 overflow-hidden">
-
+    <div className="w-screen h-screen relative bg-gray-900 overflow-x-hidden md:overflow-hidden">
       {/* Head Text */}
-      <div className="w-screen  overflow-hidden h-screen flex justify-center items-center headText opacity-0 relative">
-        <h1 className="text-[14vw] w-[60%] h-[90%] text-center absolute text-white">
-          Discover Magic
+      <div className="w-screen overflow-hidden h-screen flex justify-center items-center headText opacity-0 relative">
+        <h1
+          className="text-white text-center absolute
+          text-[6.5rem] md:text-[12vw]
+          w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]"
+        >
+          Discover <br />
+          Magic
         </h1>
       </div>
 
       {/* Cards + Animated Letters */}
       <InternalNav name="About" link="/about" />
 
-      <div className=" w-full h-full flex justify-between gap-6 items-center absolute top-0  px-8">
-
-        <div className="w-[40%] flex flex-col justify-center items-center">
-          <h2 className="text-[8vw] text-center text-white">
+      <div className="w-full h-full flex flex-col  md:flex-row justify-around gap-10 md:gap-6 items-center absolute top-[10%] md:top-0  px-4 sm:px-6 md:px-8 py-8">
+        {/* Left Letters Section */}
+        <div className="w-full md:w-[40%] flex flex-col justify-center items-center md:items-start text-center md:mt-0">
+          <h2 className="text-white text-[12vw] md:text-[8.5vw] leading-tight">
             {["Unfold", "Stories"].map((word, wIndex) => (
-              <span key={wIndex} className="inline-block">
+              <span key={wIndex} className="inline md:block">
                 {word.split("").map((char, i) => (
                   <span key={i} className="letter inline-block">
                     {char}
@@ -105,17 +110,19 @@ export default function Projects() {
             ))}
           </h2>
 
-          {/* Properly styled Access button */}
-          <Link href="https://github.com/TinkeshDeshmukh" className="inline-block">
-            <button  className=" link_btn mt-4 px-6 py-3 text-center flex  justify-center items-center text-[1.3vw]">
-              Access 
-            <ArrowUpRight/>
-
+          {/* Access Button */}
+          <Link
+            href="https://github.com/TinkeshDeshmukh"
+            className="inline-block mt-4 w-full"
+          >
+            <button className="link_btn px-4 w-full sm:px-6 py-2 sm:py-3 text-[3vw] sm:text-[1.3vw] flex justify-center items-center gap-2">
+              Access <ArrowUpRight size={16} className="sm:w-5 sm:h-5" />
             </button>
           </Link>
         </div>
 
-        <div className="w-[60%] right_compo ">
+        {/* Right Testimonials Section */}
+        <div className="w-full md:w-[60%] mt-4 flex justify-center md:mt-0 right_compo">
           <AnimatedTestimonials testimonials={testimonials} />
         </div>
       </div>

@@ -10,14 +10,14 @@ export default function InternalNav({name,link}:InternalNavProps) {
         <Link
           href="/Hero"
           className="internalNav_Links items-center justify-center  
-          border-2 border-green-300 text-white w-[6vw] h-[2.4vw] text-[1.2vw] text-center rounded-lg shadow-lg hover:bg-green-400/40  transition-all duration-300"
+          border-2 border-green-300 text-white w-[5rem] h-[1.8rem] md:w-[6vw] md:h-[2.4vw] md:text-[1.2vw] text-center rounded-lg shadow-lg  hover:bg-green-400/40  transition-all duration-300"
         >
           Home
         </Link>
                 <Link
           href={link}
           className="internalNav_Links items-center justify-center 
-          border-2 border-green-300 text-white w-[6vw] h-[2.4vw] text-[1.2vw] text-center rounded-lg shadow-lg hover:bg-green-400/40 transition-all duration-300"
+          border-2 border-green-300 text-white  w-[5rem] h-[1.8rem] md:w-[6vw] md:h-[2.4vw] md:text-[1.2vw] text-center rounded-lg shadow-lg hover:bg-green-400/40 transition-all duration-300"
         >
           {name}
         </Link>

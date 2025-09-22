@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Connect() {
   return (
-    <div className="connect flex gap-4 justify-between w-[25%]">
+    <div className="connect flex gap-4 justify-between  w-[80%] md:w-[25%]">
       {/* GitHub */}
       <Link href="https://github.com/TinkeshDeshmukh" target="_blank">
         <Github className="icon opacity-0 size-8 drop-shadow-xl hover:drop-shadow-[0_0_5px_#facc15] transition duration-300" />

@@ -83,7 +83,7 @@ export default function Projects() {
       <div className="w-screen overflow-hidden h-screen flex justify-center items-center headText opacity-0 relative">
         <h1
           className="text-white text-center absolute
-          text-[6.5rem] md:text-[12vw]
+          text-[22vw] md:text-[12vw]
           w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%]"
         >
           Discover <br />

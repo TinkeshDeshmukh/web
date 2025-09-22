@@ -91,12 +91,12 @@ export default function Hero() {
       <Preloader />
       <div className="main_div opacity-0 h-full w-full flex justify-center items-center fixed top-2 left-0">
         <div className="flex justify-center items-center">
-          <h1 className="relative heroText text-[3.5rem] md:text-[8.5vw]  text-center w-[90%] md:w-[65%]">
+          <h1 className="relative heroText text-[3.5rem] md:text-[8.5vw]  text-center w-[100%] md:w-[65%]">
             Create Beyond Boundaries.
           </h1>
 
           <svg
-            className="absolute top-[22%] md:top-[40%] left-1/2 -translate-x-1/2 w-[100%] h-[80%]"
+            className="absolute top-[33%] md:top-[22%] md:top-[40%] left-1/2 -translate-x-1/2 w-[100%] h-[80%]"
             viewBox="0 0 200 120"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

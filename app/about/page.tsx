@@ -36,9 +36,9 @@ export default function About() {
     });
 
     tl.to(".name", {
-      x: "-38vw",
+      x: "-35vw",
       y: "-40vh",
-      scale: 0.35,
+      scale: 0.30,
       duration: 0.6,
       delay: 4,
     });
